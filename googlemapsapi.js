@@ -1,3 +1,7 @@
+
+//We are going to use google maps API in this project. This will create a Client object with
+//an elevation as calculated based on a google maps call
+
 const {Client} = require("@googlemaps/google-maps-services-js");
 
 const client = new Client({});
