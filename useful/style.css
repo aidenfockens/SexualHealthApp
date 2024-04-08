@@ -1,0 +1,31 @@
+#cursor {
+    cursor : pointer; 
+    background-Color : red; 
+    display:flex;
+    margin:20px;
+
+}
+
+.tabs {
+    flex:1;
+    text-align:center;
+    padding:120px;
+    margin-bottom:-100px;
+    margin-top:-100px;
+    border-radius: 10px;
+}
+
+#Hometab{
+    color:yellow;
+    
+}
+#Partnertab{
+
+}
+#Infotab{
+
+}
+#Statustab{
+}
+#Helptab{
+}

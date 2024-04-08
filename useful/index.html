@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sexual Health App</title> 
+    <script src="script.js" type="text/javascript"></script>
+    <link rel=  "stylesheet" href = "style.css">
+</head>
+<body>
+    <div id = "task-bar">
+        
+    </div>
+    <table>
+        <tr id = "cursor" >
+            <td class = "tabs"  id = "Hometab" onclick= "ShowNewPage('Home','Hometab');">&#8962 Home </td>
+            <td class = "tabs" id = "Partnertab" onclick= "ShowNewPage('Partner','Partnertab');">New Partner</td>
+            <td class = "tabs" id = "Infotab" onclick= "ShowNewPage('Info','Infotab');"> Info</td>
+            <td class = "tabs" id = "Statustab" onclick= "ShowNewPage('Status','Statustab');"> My Status</td>
+            <td class = "tabs" id = "Helptab" onclick = "ShowNewPage('Help','Helptab');">Get Help</td>
+            
+        </tr>
+    </table>
+
+    <div id = "Home">
+        <h1>Sexual Health tracker: take control of your communities health and wellness</h1>
+        
+        <div id = "login">
+            <div id="loginstuff">
+            <div id ="usernameandlabel">
+            <label id = "usernamelabel" for = "username">Username:</label>
+            <input type = "text" id="username" name = "username">
+        </div>
+        <div id="passwordandlabel">
+            <label for = "password">Password:</label>
+            <input type = "text" id = "password" name= "password">
+        </div>
+        <div>
+            <input id = "loginclick" type = "submit" value = "login" onclick = "login()">
+            <input id = "logout" type = "submit" value = "logout" onclick="logout()">
+            <p id = "loginfeedback"></p>
+        </div>
+    
+    </div>
+
+    <div id = "Partner"></div>
+
+
+    <div id = "Info"></div>
+
+    <div id = "Status"></div>
+
+    <div id = "Help"></div>
+</body>
