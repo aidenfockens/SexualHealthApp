@@ -1,17 +1,21 @@
 import React from 'react';
-import {Route, Routes} from 'react-router-dom';
+import { Routes, Route, Outlet }  from 'react-router-dom';
+// Layout
+import Layout from './Layout/Layout.jsx';
 
-// Pages go here
+// Pages
 import Home from './Pages/Home.jsx';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />}/>
-      </Routes>
+          <Route element={<Layout> <Outlet/> </Layout>}>
+            <Route exact path="/" element={<Home />} />
+          </Route>
+       </Routes>
     </div>
-  )
+  );
 }
 
-export default App;
+export default App; 
