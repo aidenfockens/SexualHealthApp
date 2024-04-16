@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
     return (
         <div>
-            I LOVE POOP I LOVE POOP
+            Here is the test page
         </div>
     )
 }
