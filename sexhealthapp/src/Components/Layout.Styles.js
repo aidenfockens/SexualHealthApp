@@ -45,8 +45,8 @@ export const LayoutButtonLink = Styled(Link)`
 
 	background-color: ${props => props.theme.main.primary};
 	color: ${props => props.theme.main.tertiary};
-	opacity: .85;
-	border-radius: .25rem;
+	opacity: .9;
+	border-radius: .2rem;
 	border: none;
 	
 `

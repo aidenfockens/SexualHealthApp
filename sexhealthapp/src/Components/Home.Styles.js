@@ -21,6 +21,30 @@ export const BlurbContainer = Styled.div`
     padding: 1.5rem;
     margin: auto 2vw auto auto;
     font-size: 1rem;
+    align-items: center;
+    display: grid;
+`
+
+export const BlurbText = Styled.p`
+    font-size: 1vw;
+    text-align: center;
+    font-family: "Roboto";
+`
+
+export const BlurbButton = Styled.button`
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: "ROBOTO";
+    text-decoration: none;
+    margin: auto;
+    cursor: pointer;
+
+    height: 6vh;
+    width: auto;
+
+    background-color: ${props => props.theme.main.primary};
+    color: ${props => props.theme.main.tertiary};
+    border-radius: .25rem;
 `
 
 export const HomeImg = Styled.img`
