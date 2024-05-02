@@ -11,46 +11,19 @@ const Header = () => {
 
 			<div className="layoutButtons">
 
-				<LayoutButtonLink to={"/personal"}>
-					<LayoutButton>
-						log in
-					</LayoutButton>
+				<LayoutButtonLink  to={"/personal"}>
+						Log in / Sign up
 				</LayoutButtonLink>
 
-				<LayoutButton className="dropdown">
-					more info
-					<div className="dropdownMenu">
-
-						<div className="dropdownBuffer" />
-
-						<div className="dropdownLink">
-							<Link to={"/"}>
-								<p> info1 </p>
-							</Link>
-						</div>
-
-						<div className="dropdownLink">
-							<Link to={"/"}>
-								<p> info2 </p>
-							</Link>
-						</div>
-
-
-						<div className="dropdownLink">
-							<Link to={"/"}>
-								<p> hai :3 </p>
-							</Link>
-						</div>
-
-					</div>
-				</LayoutButton>
-
-
-				<LayoutButtonLink to={"/"}>
-					<LayoutButton>
-						about this site
-					</LayoutButton>
+				<LayoutButtonLink to={"/info"}>
+						Poop on me!!!
 				</LayoutButtonLink>
+
+				<LayoutButtonLink className="rightEndButton" to={"/"}>
+						About this site
+				</LayoutButtonLink>
+
+				
 			</div>
 		</HeaderContainer>
 	)
