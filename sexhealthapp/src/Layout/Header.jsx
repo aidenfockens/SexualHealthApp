@@ -16,7 +16,7 @@ const Header = () => {
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/info"}>
-						Poop on me!!!
+						Misc. info
 				</LayoutButtonLink>
 
 				<LayoutButtonLink className="rightEndButton" to={"/"}>

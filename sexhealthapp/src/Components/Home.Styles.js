@@ -10,14 +10,21 @@ export const HomeContainer = Styled.div`
     display: flex;
     margin: 0 !important;
     position: absolute;
+    align-items: center;
 `
 
 export const BlurbContainer = Styled.div`
-    height: 25vh;
-    width: 25vw;
+    height: min-content;
+    width: 40vw;
     background-color: ${props => props.theme.main.secondary};
     color: ${props => props.theme.main.text};
     padding: 1.5rem;
-    margin: auto;
-    font-size: 1.25rem;
+    margin: auto 2vw auto auto;
+    font-size: 1rem;
+`
+
+export const HomeImg = Styled.img`
+    height: 50vh;
+    width: auto;
+    margin: auto auto auto 2vw;
 `
