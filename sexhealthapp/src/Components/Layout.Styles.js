@@ -2,11 +2,11 @@ import Styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = Styled.div`
-	height: 11vh;
+	height: 8vh;
 	background-color: ${props => props.theme.main.background};
 	color: ${props => props.theme.main.primary};
 	display: flex;
-	position: absolute;
+	position: fixed;
 	box-shadow: 0rem .025rem .5rem 0 black;
 	z-index: 100;
 	width: 100vw;
@@ -36,7 +36,7 @@ export const LayoutButtonLink = Styled(Link)`
 	font-family: "Roboto";
 	text-decoration: none;
 
-	margin: auto 1rem;
+	margin: auto .5rem;
 	height: 6vh;
 	width: auto;
 	display: flex;

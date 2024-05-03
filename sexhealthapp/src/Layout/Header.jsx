@@ -11,7 +11,7 @@ const Header = () => {
 
 			<div className="layoutButtons">
 
-				<LayoutButtonLink  to={"/personal"}>
+				<LayoutButtonLink  to={"/login"}>
 						Log in / Sign up
 				</LayoutButtonLink>
 
@@ -19,7 +19,7 @@ const Header = () => {
 						Misc. info
 				</LayoutButtonLink>
 
-				<LayoutButtonLink className="rightEndButton" to={"/"}>
+				<LayoutButtonLink  to={"/"}>
 						About this site
 				</LayoutButtonLink>
 
