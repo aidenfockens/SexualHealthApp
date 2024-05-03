@@ -186,7 +186,7 @@ app.post('/api/changeSafety/:username', (req, res) => {
     const username = req.params.username;
     var isSafe = req.body.safety
     var safeDate = req.body.safeDate
-    if (isSafe == "n"){
+    if (isSafe != "y"){
 
         db.get('SELECT connections FROM users WHERE username = ?', [username], (err, row) => {
             if (err) {
@@ -239,7 +239,7 @@ app.post('/api/changeSafety/:username', (req, res) => {
                 res.status(500).json({ error: 'Internal server error' });
             } else {
                 console.log("changed",username,"safety to",isSafe)
-
+                
             }
         });
     });

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HomeContainer, BlurbContainer, HomeImg, BlurbButton, BlurbText } from '../Components/Home.Styles.js'
 
 const LogIn = () => {
     const addUser =  async () => {
@@ -64,13 +65,29 @@ const LogIn = () => {
     return (
         <div>
             <h1>YAYAYAY</h1>
+            <HomeContainer>
+            <BlurbContainer>
+            <h1>Did you know: 1 in 5 people have an STI</h1>
+            <p>Our App deals with that problem!</p>
+            <p>Keep up to date on your partners, symptoms, and health clinics. Alert others when you contract something, and feel at ease knowing you're STI clean otherwise!</p>
+            <p>The shame and anxiety of telling others you have an STI is gone. Our application is fully anonymous, yet can alert all of your partners as soon as something is wrong. This ensures there are no barriers to staying informed!</p>
+            <p>Get started at "add new bodies" by inputting your partners names, how wrote yours for your username! </p>
+           
+            </BlurbContainer>
+            <BlurbContainer>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"/>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" />
-            <button class="btn" onClick={addUser} >Sign up</button>
-            <button class="btn" onClick={logInUser} >Log in</button>
+
+            <p  >Make sure your username is your first and last name, both capital and no space!</p>
+            <BlurbButton class="btn" onClick={addUser} >Sign up</BlurbButton>
+            <BlurbButton class="btn" onClick={logInUser} >Log in</BlurbButton>
+            
             <h2 id="loggedin"></h2>
+            </BlurbContainer>
+            
+            </HomeContainer>
         </div>
     )
 }

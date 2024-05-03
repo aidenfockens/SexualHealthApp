@@ -6,7 +6,7 @@ const Header = () => {
 	return (
 		<HeaderContainer>
 			<HeaderTitle>
-                unnamedHealthApp
+                BodyCount
 			</HeaderTitle>
 
 			<div className="layoutButtons">
@@ -16,19 +16,19 @@ const Header = () => {
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/writeConnections"}>
-						add new Connections
+						Add new Bodies
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/viewConnections"}>
-						view your Connections
+						View your Bodies
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/Status"}>
-						Check  Status
+						Check STD Status
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/Symptom"}>
-						Symptom checker
+						Check Symptoms
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/Map"}>
