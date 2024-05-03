@@ -23,6 +23,8 @@ const WriteConnections = () => {
             console.log("yoyo")
             if (response.ok) {
                 // User added successfully
+                document.getElementById("bodyAdded").style.display = "block"
+
                 console.log('Body added successfully');
             } else {
                 // Handle error response
@@ -56,7 +58,8 @@ const WriteConnections = () => {
             <input type="text" id="gave" name="gave"/>
             </BlurbContainer>
             <BlurbContainer>
-            <BlurbButton class="btn" onClick={addBody} >Add Body</BlurbButton>
+            <BlurbButton class="btn" onClick={addBody} >Add Partner</BlurbButton>
+            <h1 style={{ display: 'none' }}  id = "bodyAdded">Added Partner!</h1>
             </BlurbContainer>
             
             </HomeContainer>

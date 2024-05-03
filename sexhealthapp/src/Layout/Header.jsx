@@ -16,11 +16,11 @@ const Header = () => {
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/writeConnections"}>
-						Add new Bodies
+						Add new Partners
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/viewConnections"}>
-						View your Bodies
+						View your Partners
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/Status"}>
