@@ -58,3 +58,15 @@ html {
 .testpoop > .testpoop:hover{
     cursor: pointer;
 }
+
+.connectionsDiv {
+    width: 50vw;
+    height: auto;
+    background-color: #0A2342;
+    margin: 1rem 0;
+}
+
+.connectionsPara {
+    font-size: 1rem;
+    color: #F3F5F6;
+}

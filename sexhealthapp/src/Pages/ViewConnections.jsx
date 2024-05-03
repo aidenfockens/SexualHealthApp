@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {connectionsDiv, connectionsPara} from '../Components/Home.Styles.js';
 
 const ViewConnections = () => {
     const getBodies = () => {
@@ -17,7 +18,10 @@ const ViewConnections = () => {
     // Handle the data returned from the API
     //console.log(data)
     document.getElementById("bodies").textContent = ""
+    var div = document.getElementById("bodies")
     for (const index in data.connections){
+        var jsonDiv = document.createElement("div")
+        jsonDiv.classList.add("connectionsDiv")
         for (const key in data.connections[index]) {
             document.getElementById("bodies").textContent += `${key}: ${data.connections[index][key]}`;
         }
@@ -29,11 +33,11 @@ const ViewConnections = () => {
     });
     }
     return (
-        <div>
+        <connectionsDiv>
             <h1>YAYAYAY</h1>
             <button class ="btn" onClick ={getBodies}> Display bodies</button>
-            <p id = "bodies"></p>
-        </div>
+            <div id = "bodies"></div> 
+        </connectionsDiv>
     )
 }
 
