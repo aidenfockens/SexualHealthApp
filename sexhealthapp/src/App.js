@@ -5,6 +5,7 @@ import Layout from './Layout/Layout.jsx';
 
 // Pages
 import Home from './Pages/Home.jsx';
+import LogIn from './Pages/LogIn.jsx';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
           <Route element={<Layout> <Outlet/> </Layout>}>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<LogIn />}/>
           </Route>
        </Routes>
     </div>

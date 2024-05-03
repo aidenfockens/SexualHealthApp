@@ -3,35 +3,23 @@ import { Link } from 'react-router-dom';
 
 export const HeaderContainer = Styled.div`
 	height: 8vh;
-	padding: 0 20rem;
 	background-color: ${props => props.theme.main.background};
 	color: ${props => props.theme.main.primary};
 	display: flex;
-	position: absolute;
-	box-shadow: 0rem .025rem .5rem 0 ${props => props.theme.main.tertiary};
+	position: fixed;
+	box-shadow: 0rem .025rem .5rem 0 black;
 	z-index: 100;
 	width: 100vw;
 	top: 0;
-`
-
-export const FooterContainer = Styled.div`
-	height: 12vh;
-	padding: 0rem 20rem;
-	background-color: ${props => props.theme.main.secondary};
-	color: ${props => props.theme.main.text};
-	display: flex;
-	position: aboslute;
-    box-shadow: 0rem .025rem 1rem 0 ${props => props.theme.main.tertiary};
-	z-index: 100;
-	width: 100vw;
-	bottom: 0;
+	left: 0;
 `
 
 export const HeaderTitle = Styled.h1`
 	font-weight: 500;
-	margin: auto 0;
+	margin: auto 3vw;
 	user-select: none;
 	font-size: 3rem;
+	font-family: "Roboto";
 `
 
 export const HeaderSubtitle = Styled.h1`
@@ -41,18 +29,24 @@ export const HeaderSubtitle = Styled.h1`
 	font-size: 1.5rem;
 `
 
-export const LayoutButton = Styled.button`
-	font-weight: 500;
+export const LayoutButtonLink = Styled(Link)`
+	font-weight: 400;
 	font-size: 1.25vw;
 	text-align: center;
-	height: 100%;
-	width: auto;
-	background-color: ${props => props.theme.main.primary};
-	color: ${props => props.theme.main.text};
-`
+	font-family: "Roboto";
+	text-decoration: none;
 
-export const LayoutButtonLink = Styled(Link)`
-	margin: auto 0rem auto 1rem;
-	height: 4.8vh;
-	display: inline-block;
+	margin: auto .5rem;
+	height: 6vh;
+	width: auto;
+	display: flex;
+	padding: 0 1rem;
+	align-items: center;
+
+	background-color: ${props => props.theme.main.primary};
+	color: ${props => props.theme.main.tertiary};
+	opacity: .9;
+	border-radius: .2rem;
+	border: none;
+	
 `
