@@ -15,14 +15,31 @@ const Header = () => {
 						Log in / Sign up
 				</LayoutButtonLink>
 
-				<LayoutButtonLink to={"/info"}>
-						Misc. info
-				</LayoutButtonLink>
+
 
 				<LayoutButtonLink  to={"/"}>
 						About this site
 				</LayoutButtonLink>
 
+				<LayoutButtonLink to={"/writeConnections"}>
+						add new Connections
+				</LayoutButtonLink>
+
+				<LayoutButtonLink to={"/viewConnections"}>
+						view your Connections
+				</LayoutButtonLink>
+
+				<LayoutButtonLink to={"/Status"}>
+						Check  Status
+				</LayoutButtonLink>
+
+				<LayoutButtonLink to={"/Symptom"}>
+						Symptom checker
+				</LayoutButtonLink>
+
+				<LayoutButtonLink to={"/Map"}>
+						Trip to Clinic
+				</LayoutButtonLink>
 				
 			</div>
 		</HeaderContainer>

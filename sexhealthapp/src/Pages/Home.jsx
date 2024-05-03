@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { HomeContainer, BlurbContainer, HomeImg, BlurbButton, BlurbText } from '../Components/Home.Styles.js'
 
 const Home = () => {
+    //set initial Username to Guest
+    localStorage.setItem('username', JSON.stringify("Guest"));
     return (
         <HomeContainer>
             <BlurbContainer>

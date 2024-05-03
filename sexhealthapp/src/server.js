@@ -78,6 +78,35 @@ app.post('/api/writeBodies/:username', (req, res) => {
 
 
 
+app.get("/api/getSafety/:username", (req,res) => {
+    const {username} = req.params
+
+    db.get('SELECT safety FROM users WHERE username = ?', [username], (err, row) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Internal server error' });
+            return;
+        }
+
+        if (!row) {
+            // User not found
+            res.status(404).json({ error: 'User not found' });
+            return;
+        }
+ 
+        // Parse the connections JSON string into an object
+        console.log(row.safety)
+        // Send the connections as a JSON response
+        res.status(200).json({safety: row.safety});
+    });
+});
+
+
+
+
+
+
+
 app.get("/api/getBodies/:username", (req,res) => {
     const {username} = req.params
     console.log(username)
@@ -199,7 +228,7 @@ app.post('/api/changeSafety/:username', (req, res) => {
 
 
 
-    import React from 'react';
+
 
 
 
