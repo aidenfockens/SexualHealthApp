@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { HomeContainer, BlurbContainer, HomeImg, BlurbButton, BlurbText } from '../Components/Home.Styles.js'
+import { HomeContainer, BlurbContainer, HomeImg, BlurbButton, BlurbText } from '../Components/Home.Styles.js';
+
+// loggedIn variable
+var logIn = false;
 
 const LogIn = () => {
     const addUser =  async () => {
@@ -18,9 +21,18 @@ const LogIn = () => {
     
                 if (response.ok) {
                     // User added successfully
+
+                    // check if the fields are null:
+                    if (username.length == 0 || password.length == 0) {
+                        console.error('Error: Please enter a valid username or password')
+                        document.getElementById("loggedin").textContent = `Please enter a valid username or password.`
+                    } else {
                     console.log('User added successfully');
                     document.getElementById("loggedin").textContent = `Logged in as ${username}`
-
+                    // change the address to the dashboard 
+                    window.location.pathname = '/status';
+                    
+                    }
                 } else {
                     // Handle error response
                     console.error('Failed to add user');
@@ -39,7 +51,7 @@ const LogIn = () => {
         console.log(username)
         fetch(`http://localhost:5000/api/getPassword/${username}`).then(response => {
     if (!response.ok) {
-        throw new Error('Network response was not ok');
+        document.getElementById("loggedin").textContent = `Please enter a valid username or password.`
     }
 
     return response.json()
@@ -48,9 +60,12 @@ const LogIn = () => {
     if (data.password == newpassword){
         localStorage.setItem('username', JSON.stringify(username));
         document.getElementById("loggedin").textContent = `Logged in as ${username}`
+    
+        // mike here - this is to bring them to the dashboard
+        window.location.pathname = '/status';
         
     }else{
-        document.getElementById("loggedin").textContent = `Incorrect password or username, still logged in as ${localStorage.getItem('username').replace(/"/g, '')}`
+        document.getElementById("loggedin").textContent = `Incorrect password or username, still logged in as Guest`
     }
  });
 }

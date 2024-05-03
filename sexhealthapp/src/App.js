@@ -4,7 +4,6 @@ import { Routes, Route, Outlet }  from 'react-router-dom';
 import Layout from './Layout/Layout.jsx';
 
 // Pages
-import Home from './Pages/Home.jsx';
 import LogIn from './Pages/LogIn.jsx';
 import Status from './Pages/Status.jsx';
 import WriteConnections from './Pages/WriteConnections.jsx';
@@ -18,9 +17,8 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
+        <Route exact path="/" element={<LogIn/>} />
           <Route element={<Layout> <Outlet/> </Layout>}>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/login" element={<LogIn />}/>
             <Route exact path="/Status" element = {<Status/>}/>
             <Route exact path="/viewConnections" element = {<ViewConnections/>}/>
             <Route exact path="/writeConnections" element = {<WriteConnections/>}/>

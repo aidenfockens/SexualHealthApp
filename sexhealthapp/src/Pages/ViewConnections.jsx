@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {connectionsDiv, connectionsPara} from '../Components/Home.Styles.js';
+import { HomeContainer, BlurbContainer, HomeImg, BlurbButton, BlurbText } from '../Components/Home.Styles.js'
 
 const ViewConnections = () => {
     const getBodies = () => {
@@ -23,8 +23,9 @@ const ViewConnections = () => {
         var jsonDiv = document.createElement("div")
         jsonDiv.classList.add("connectionsDiv")
         for (const key in data.connections[index]) {
-            document.getElementById("bodies").textContent += `${key}: ${data.connections[index][key]}`;
+            document.getElementById("connectionsDiv").textContent += `${key}: ${data.connections[index][key]}`;
         }
+        document.getElementById("bodies").appendChild(jsonDiv);
     }
     })
     .catch(error => {

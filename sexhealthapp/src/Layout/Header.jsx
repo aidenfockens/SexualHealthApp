@@ -1,8 +1,13 @@
 import React from 'react';
-import { HeaderContainer, HeaderTitle, HeaderSubtitle, LayoutButton, LayoutButtonLink } from "../Components/Layout.Styles.js";
+import { HeaderContainer, HeaderTitle, HeaderSubtitle, LayoutButton, LayoutButtonLink} from "../Components/Layout.Styles.js";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+	const logOut = () => {
+		window.location.pathname = '/';
+	}
+
 	return (
 		<HeaderContainer>
 			<HeaderTitle>
@@ -11,8 +16,12 @@ const Header = () => {
 
 			<div className="layoutButtons">
 
-				<LayoutButtonLink  to={"/login"}>
-						Log in / Sign up
+				<LayoutButton onClick={logOut}>
+						Log out
+				</LayoutButton>
+
+				<LayoutButtonLink to={"/Status"}>
+						Check STD Status
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/writeConnections"}>
@@ -21,10 +30,6 @@ const Header = () => {
 
 				<LayoutButtonLink to={"/viewConnections"}>
 						View your Partners
-				</LayoutButtonLink>
-
-				<LayoutButtonLink to={"/Status"}>
-						Check STD Status
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/Symptom"}>
