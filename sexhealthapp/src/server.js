@@ -397,3 +397,59 @@ app.post('/api/changeSafety/:username', (req, res) => {
     
     
     // export default Home;
+
+
+
+
+
+
+//in package.json
+
+
+// "scripts": {
+//     "start": "react-app-rewired start",
+//     "build": "react-app-rewired build",
+//     "test": "react-app-rewired test",
+//     "eject": "react-scripts eject"
+//   },
+
+
+
+
+//config-overrides.js
+    // const path = require('path');
+
+    // module.exports = {
+    //   webpack: function (config, env) {
+    //     // Add polyfills for Node.js core modules
+    //     config.resolve.fallback = {
+    //       ...config.resolve.fallback,
+    //       fs: false,
+    //       path: require.resolve('path-browserify'),
+    //       util: require.resolve('util/'),
+    //     };
+    
+    //     return config;
+    //   },
+    // };
+
+
+
+
+//Home.styles.js
+
+// import Styled from 'styled-components';
+// import { Link } from 'react-router-dom';
+
+// export const stdfact1 = Styled.div`
+// width: 100%;
+//       height: 100px;
+//       background-color: #007bff; 
+//       color: #fff; 
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       font-size: 24px;
+//       font-weight: bold;
+
+// `
