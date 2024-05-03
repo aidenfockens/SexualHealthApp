@@ -15,12 +15,6 @@ const Header = () => {
 						Log in / Sign up
 				</LayoutButtonLink>
 
-
-
-				<LayoutButtonLink  to={"/"}>
-						About this site
-				</LayoutButtonLink>
-
 				<LayoutButtonLink to={"/writeConnections"}>
 						add new Connections
 				</LayoutButtonLink>

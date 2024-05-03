@@ -54,8 +54,9 @@ const Status = () => {
 
 
 
-
-    getStatus()
+    if (localStorage.getItem('username').replace(/"/g, '') != "Guest"){
+        getStatus()
+    }
     return (
         <div>
             
@@ -66,10 +67,9 @@ const Status = () => {
             <label for ="safeDate">Last date tested MM/DD/YY</label>
             <input type="text" id="safeDate" name= "safeDate"/>
     
-            <label for ="isSafe">safe or not y/n</label>
+            <label for ="isSafe">Have you gotten a diagnosis? If so, input n and the date you were last tested.</label>
             <input type="text" id="isSafe" name= "isSafe"/>
             <button class= "btn" onClick = {changeSafety}> change safety of bodies and yourself </button>
-
 
         </div>
     )

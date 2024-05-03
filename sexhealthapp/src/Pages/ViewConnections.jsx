@@ -19,9 +19,8 @@ const ViewConnections = () => {
     document.getElementById("bodies").textContent = ""
     for (const index in data.connections){
         for (const key in data.connections[index]) {
-            document.getElementById("bodies").textContent += `${key}: ${data.connections[index][key]} `;
+            document.getElementById("bodies").textContent += `${key}: ${data.connections[index][key]}`;
         }
-        document.getElementById("bodies").textContent += "         "
     }
     })
     .catch(error => {
