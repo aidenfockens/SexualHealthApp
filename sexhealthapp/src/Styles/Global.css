@@ -116,3 +116,10 @@ button {
     }
 }
 /* end of symptom CSS */
+
+/*maps css */
+#map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
