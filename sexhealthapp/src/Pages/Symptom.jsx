@@ -3,7 +3,7 @@ Updated to use React Hooks and modernized packages for the purposes of the proje
 Original code may be found at: https://github.com/infermedica/js-symptom-checker-example
 */
 import React, { useEffect, useRef } from 'react';
-import DemoApp from '../Components/sympComponents/app';
+import DemoApp from '../Components/sympComponents/app.js';
 
 const Symptom = () => {
   const appRef = useRef(null);
@@ -15,7 +15,7 @@ const Symptom = () => {
   }, []);
 
   return (
-    <div id="app" ref={appRef}>
+    <div className="symptom" id="app" ref={appRef}>
       <p>App not loaded.</p>
     </div>
   );

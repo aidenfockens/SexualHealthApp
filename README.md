@@ -7,11 +7,15 @@ npm i
 
 # ...assuming that you have node.js and node package manager (npm) installed.
 
-### 1. Open a terminal, cd to ./sexhealthapp/src and type the following...
+### 1. Open a terminal, cd to ./sexhealthapp/src/db and type the following...
+
+node createdatabase.js
+
+### 2. cd ./sexhealthapp/src and type the following in the same bash terminal...
 
 node server.js
 
-### 2. cd to simply ./sexhealthapp and type the following in a new bash terminal ...
+### 3. cd to ./sexhealthapp and type the following in a NEW base terminal...
 
 npm start
 
