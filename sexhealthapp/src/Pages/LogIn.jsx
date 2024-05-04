@@ -86,7 +86,7 @@ const LogIn = () => {
             <p>Our App deals with that problem!</p>
             <p>Keep up to date on your partners, symptoms, and health clinics. Alert others when you contract something, and feel at ease knowing you're STI clean otherwise!</p>
             <p>The shame and anxiety of telling others you have an STI is gone. Our application is fully anonymous, yet can alert all of your partners as soon as something is wrong. This ensures there are no barriers to staying informed!</p>
-            <p>Get started at "add new bodies" by inputting your partners names, how wrote yours for your username! </p>
+            <p>Get started by creating an account, and adding bodies! </p>
            
             </BlurbContainer>
             <BlurbContainer>
