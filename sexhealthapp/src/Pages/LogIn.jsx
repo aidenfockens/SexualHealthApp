@@ -79,7 +79,6 @@ const LogIn = () => {
     
     return (
         <div>
-            <googlePlatformScript/>
             <h1>YAYAYAY</h1>
             <HomeContainer>
             <BlurbContainer>
@@ -87,7 +86,7 @@ const LogIn = () => {
             <p>Our App deals with that problem!</p>
             <p>Keep up to date on your partners, symptoms, and health clinics. Alert others when you contract something, and feel at ease knowing you're STI clean otherwise!</p>
             <p>The shame and anxiety of telling others you have an STI is gone. Our application is fully anonymous, yet can alert all of your partners as soon as something is wrong. This ensures there are no barriers to staying informed!</p>
-            <p>Get started by creating an account, and adding bodies! </p>
+            <p>Get started at "add new bodies" by inputting your partners names, how wrote yours for your username! </p>
            
             </BlurbContainer>
             <BlurbContainer>
@@ -99,8 +98,6 @@ const LogIn = () => {
             <p  >Make sure your username is your first and last name, both capital and no space!</p>
             <BlurbButton class="btn" onClick={addUser} >Sign up</BlurbButton>
             <BlurbButton class="btn" onClick={logInUser} >Log in</BlurbButton>
-
-            <div class="g-signin2 oauthLogin" data-onsuccess="onSignIn"></div>
             
             <h2 id="loggedin"></h2>
             </BlurbContainer>
