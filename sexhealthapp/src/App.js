@@ -12,15 +12,13 @@ import Symptom from './Pages/Symptom.jsx';
 import Map from './Pages/Map.jsx';
 
 // The Google oAuth Script
-import GooglePlatformScript from './scripts/oAuthGoogle.jsx';
-
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 
 const App = () => {
   return (
+    <GoogleOAuthProvider clientId="478647196527-opl81qpcmmhif09dr8g61ja08grjoj5h">
     <div className="App">
-      <meta name="google-signin-client_id" content="478647196527-opl81qpcmmhif09dr8g61ja08grjoj5h.apps.googleusercontent.com"></meta>
-      <GooglePlatformScript/>
       <Routes>
         <Route exact path="/" element={<LogIn/>} />
           <Route element={<Layout> <Outlet/> </Layout>}>
@@ -32,6 +30,7 @@ const App = () => {
           </Route>
        </Routes>
     </div>
+    </GoogleOAuthProvider>
   );
 }
 
