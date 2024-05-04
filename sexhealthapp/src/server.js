@@ -34,7 +34,28 @@ app.post('/api/users', (req, res) => {
     });
   });
 
+  app.get("/api/ifExists/:username", (req,res) => {
+    const {username} = req.params
 
+    db.get('SELECT safety FROM users WHERE username = ?', [username], (err, row) => {
+        if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Internal server error' });
+            return;
+        }
+
+        if (!row) {
+            // User not found
+            res.status(200).json({ exists: "no"});
+            return;
+        }
+ 
+        // Parse the connections JSON string into an object
+  
+        // Send the connections as a JSON response
+        res.status(200).json({exists: "yes"});
+    });
+});
 
 
 

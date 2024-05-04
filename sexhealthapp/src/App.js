@@ -11,10 +11,13 @@ import ViewConnections from './Pages/ViewConnections.jsx';
 import Symptom from './Pages/Symptom.jsx';
 import Map from './Pages/Map.jsx';
 
+// The Google oAuth Script
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 
 const App = () => {
   return (
+    <GoogleOAuthProvider clientId="478647196527-opl81qpcmmhif09dr8g61ja08grjoj5h">
     <div className="App">
       <Routes>
         <Route exact path="/" element={<LogIn/>} />
@@ -27,6 +30,7 @@ const App = () => {
           </Route>
        </Routes>
     </div>
+    </GoogleOAuthProvider>
   );
 }
 
