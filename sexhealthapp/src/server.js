@@ -134,9 +134,29 @@ app.get("/api/getBodies/:username", (req,res) => {
 });
 
 
-app.get("/api/isSafe/:username", (req,res) => {
+app.get("/api/getPassword/:username",(req,res) => {
     const {username} = req.params
     console.log(username)
+    db.get('SELECT password FROM users WHERE username = ?', [username], (err,row) => {
+        if (err) {
+        console.log("heya2")
+        console.error(err);
+        res.status(500).json({ error: 'Internal server error' });
+        return;}
+        if (!row) {
+            // User not found
+            console.log("heya")
+            res.status(404).json({ error: 'User not found' });
+            return;
+        }
+       
+        res.status(200).json({"password":row.password});
+    })
+})
+
+
+app.get("/api/isSafe/:username", (req,res) => {
+    const {username} = req.params
     db.get('SELECT safety FROM users WHERE username = ?', [username], (err, row) => {
         if (err) {
             console.log("hey we not chillin!!")
@@ -161,11 +181,12 @@ app.get("/api/isSafe/:username", (req,res) => {
 
 
 
+
 app.post('/api/changeSafety/:username', (req, res) => {
     const username = req.params.username;
     var isSafe = req.body.safety
     var safeDate = req.body.safeDate
-    if (isSafe == "n"){
+    if (isSafe != "y"){
 
         db.get('SELECT connections FROM users WHERE username = ?', [username], (err, row) => {
             if (err) {
@@ -218,7 +239,7 @@ app.post('/api/changeSafety/:username', (req, res) => {
                 res.status(500).json({ error: 'Internal server error' });
             } else {
                 console.log("changed",username,"safety to",isSafe)
-
+                
             }
         });
     });

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HomeContainer, BlurbContainer, HomeImg, BlurbButton, BlurbText } from '../Components/Home.Styles.js'
+
 
 const WriteConnections = () => {
     const addBody = async () => {
@@ -20,6 +22,8 @@ const WriteConnections = () => {
             console.log("yoyo")
             if (response.ok) {
                 // User added successfully
+                document.getElementById("bodyAdded").style.display = "block"
+
                 console.log('Body added successfully');
             } else {
                 // Handle error response
@@ -31,8 +35,12 @@ const WriteConnections = () => {
 
     }
     return (
-        <div>
-            <h1>YAYAYAY</h1>
+
+            
+            <div>
+            <h1>YAYAYYA</h1>
+            <HomeContainer>
+                <BlurbContainer>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name"/>
 
@@ -42,14 +50,20 @@ const WriteConnections = () => {
             <label for="protection">Used Protection: y or n</label>
             <input type="text" id="protection" name="protection"/>
 
-            <label for="type">Anal, oral, Vaginal:</label>
+            <label for="type">Anal, Oral, Vaginal:</label>
             <input type="text" id="type" name="type" />
 
             <label for="gave">Gave or Received:</label>
             <input type="text" id="gave" name="gave"/>
-
-            <button class="btn" onClick={addBody} >Add Body</button>
-        </div>
+            </BlurbContainer>
+            <BlurbContainer>
+            <BlurbButton class="btn" onClick={addBody} >Add Partner</BlurbButton>
+            <h1 style={{ display: 'none' }}  id = "bodyAdded">Added Partner!</h1>
+            </BlurbContainer>
+            
+            </HomeContainer>
+            </div>
+        
     )
 }
 

@@ -48,5 +48,26 @@ export const LayoutButtonLink = Styled(Link)`
 	opacity: .9;
 	border-radius: .2rem;
 	border: none;
-	
+`
+
+export const LayoutButton = Styled.button`
+	font-weight: 400;
+	font-size: 1.25vw;
+	text-align: center;
+	font-family: "Roboto";
+	text-decoration: none;
+
+	margin: auto .5rem;
+	height: 6vh;
+	width: auto;
+	display: flex;
+	padding: 0 1rem;
+	align-items: center;
+
+	background-color: ${props => props.theme.main.primary};
+	color: ${props => props.theme.main.tertiary};
+	opacity: .9;
+	border-radius: .2rem;
+	border: none;
+	cursor: pointer;
 `

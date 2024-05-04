@@ -59,6 +59,22 @@ html {
     cursor: pointer;
 }
 
+.connectionsDiv {
+    width: 25rem;
+    height: auto;
+    display: flex;
+    background-color: #0A2342;
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+}
+
+.connectionsPara {
+    font-size: 125%;
+    text-align: center;
+    font-family: "Roboto";
+    color: #F3F5F6;
+}
+
 /* Symptom  */
 
 .main-container {

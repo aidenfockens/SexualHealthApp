@@ -1,40 +1,39 @@
 import React from 'react';
-import { HeaderContainer, HeaderTitle, HeaderSubtitle, LayoutButton, LayoutButtonLink } from "../Components/Layout.Styles.js";
+import { HeaderContainer, HeaderTitle, HeaderSubtitle, LayoutButton, LayoutButtonLink} from "../Components/Layout.Styles.js";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
+	const logOut = () => {
+		window.location.pathname = '/';
+	}
+
 	return (
 		<HeaderContainer>
 			<HeaderTitle>
-                unnamedHealthApp
+                BodyCount
 			</HeaderTitle>
 
 			<div className="layoutButtons">
 
-				<LayoutButtonLink  to={"/login"}>
-						Log in / Sign up
-				</LayoutButtonLink>
+				<LayoutButton onClick={logOut}>
+						Log out
+				</LayoutButton>
 
-
-
-				<LayoutButtonLink  to={"/"}>
-						About this site
+				<LayoutButtonLink to={"/Status"}>
+						Check STD Status
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/writeConnections"}>
-						add new Connections
+						Add new Partners
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/viewConnections"}>
-						view your Connections
-				</LayoutButtonLink>
-
-				<LayoutButtonLink to={"/Status"}>
-						Check  Status
+						View your Partners
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/Symptom"}>
-						Symptom checker
+						Check Symptoms
 				</LayoutButtonLink>
 
 				<LayoutButtonLink to={"/Map"}>

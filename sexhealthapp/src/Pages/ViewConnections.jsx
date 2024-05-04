@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { HomeContainer, BlurbContainer, HomeImg, BlurbButton, BlurbText } from '../Components/Home.Styles.js'
 
 const ViewConnections = () => {
     const getBodies = () => {
@@ -17,11 +18,26 @@ const ViewConnections = () => {
     // Handle the data returned from the API
     //console.log(data)
     document.getElementById("bodies").textContent = ""
+    var div = document.getElementById("bodies")
     for (const index in data.connections){
+        
+        // create a card per contact
+        var jsonDiv = document.createElement("div")
+        jsonDiv.classList.add("connectionsDiv")
+        
+        // make the text for each contact
+        var cardText = document.createElement("p")
+        // give it proper styling
+        cardText.classList.add("connectionsPara")
+        
         for (const key in data.connections[index]) {
-            document.getElementById("bodies").textContent += `${key}: ${data.connections[index][key]} `;
+            // add each line to the paragraph
+            cardText.textContent += `${key.toUpperCase()}:\n ${data.connections[index][key]}\n`;
         }
-        document.getElementById("bodies").textContent += "         "
+
+        // add the paragraph to the card
+        jsonDiv.appendChild(cardText);
+        document.getElementById("bodies").appendChild(jsonDiv);
     }
     })
     .catch(error => {
@@ -30,11 +46,11 @@ const ViewConnections = () => {
     });
     }
     return (
-        <div>
+        <connectionsDiv>
             <h1>YAYAYAY</h1>
-            <button class ="btn" onClick ={getBodies}> Display bodies</button>
-            <p id = "bodies"></p>
-        </div>
+            <BlurbButton class ="btn" onClick ={getBodies}> Display bodies</BlurbButton>
+            <div id = "bodies"></div> 
+        </connectionsDiv>
     )
 }
 
