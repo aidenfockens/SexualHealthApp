@@ -20,11 +20,23 @@ const ViewConnections = () => {
     document.getElementById("bodies").textContent = ""
     var div = document.getElementById("bodies")
     for (const index in data.connections){
+        
+        // create a card per contact
         var jsonDiv = document.createElement("div")
         jsonDiv.classList.add("connectionsDiv")
+        
+        // make the text for each contact
+        var cardText = document.createElement("p")
+        // give it proper styling
+        cardText.classList.add("connectionsPara")
+        
         for (const key in data.connections[index]) {
-            document.getElementById("connectionsDiv").textContent += `${key}: ${data.connections[index][key]}`;
+            // add each line to the paragraph
+            cardText.textContent += `${key.toUpperCase()}:\n ${data.connections[index][key]}\n`;
         }
+
+        // add the paragraph to the card
+        jsonDiv.appendChild(cardText);
         document.getElementById("bodies").appendChild(jsonDiv);
     }
     })
@@ -36,7 +48,7 @@ const ViewConnections = () => {
     return (
         <connectionsDiv>
             <h1>YAYAYAY</h1>
-            <button class ="btn" onClick ={getBodies}> Display bodies</button>
+            <BlurbButton class ="btn" onClick ={getBodies}> Display bodies</BlurbButton>
             <div id = "bodies"></div> 
         </connectionsDiv>
     )
