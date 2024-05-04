@@ -79,6 +79,7 @@ const LogIn = () => {
     
     return (
         <div>
+            <googlePlatformScript/>
             <h1>YAYAYAY</h1>
             <HomeContainer>
             <BlurbContainer>
@@ -98,6 +99,8 @@ const LogIn = () => {
             <p  >Make sure your username is your first and last name, both capital and no space!</p>
             <BlurbButton class="btn" onClick={addUser} >Sign up</BlurbButton>
             <BlurbButton class="btn" onClick={logInUser} >Log in</BlurbButton>
+
+            <div class="g-signin2 oauthLogin" data-onsuccess="onSignIn"></div>
             
             <h2 id="loggedin"></h2>
             </BlurbContainer>

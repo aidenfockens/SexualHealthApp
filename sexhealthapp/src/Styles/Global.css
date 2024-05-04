@@ -74,3 +74,7 @@ html {
     font-family: "Roboto";
     color: #F3F5F6;
 }
+
+.oauthLogin {
+    margin: 1rem auto 0rem auto;
+}
