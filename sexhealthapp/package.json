@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
+    "destroy": "^1.2.0",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
@@ -46,7 +47,6 @@
     ]
   },
   "devDependencies": {
-    "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.2.1"
+    "customize-cra": "^1.0.0"
   }
 }
